@@ -17,10 +17,9 @@ namespace Samples._1.Client
 
             var result = httpClient.GetAsync("api/resume").Result;
 
-            result.EnsureSuccessStatusCode();
-            var resumes = result.Content.ReadAsAsync<IEnumerable<Resume>>().Result;
+            result.EnsureSuccessStatusCode();            
 
-            foreach (var resume in resumes)
+            foreach (var resume in result.Content.ReadAsAsync<IEnumerable<Resume>>().Result)
                 Console.WriteLine(resume.FirstName + " " + resume.LastName);
 
             Console.ReadLine();

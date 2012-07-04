@@ -8,27 +8,25 @@ using System.Net.Http;
 using System.Net;
 
 namespace Samples._1.Server.Controllers
-{
-    // TODO: Implement real store/repository
+{    
     public class ResumeController : ApiController
     {
+        private static ResumeStore _store = new ResumeStore();
+
         public IEnumerable<Resume> GetResumes()
         {
-            return new List<Resume>() { 
-                new Resume() { FirstName = "Jef", LastName = "Claes", Skills = null },
-                new Resume() { FirstName = "Christophe", LastName = "Geers", Skills = null }
-            };
+            return _store.GetAll();
         }
 
-        public Resume GetById(int id)
-        {            
-            return new Resume() { FirstName = "Jef", LastName = "Claes", Skills = null };
+        public Resume GetById(string id)
+        {
+            return _store.GetById(id);
         }
 
         public HttpResponseMessage PostResume(Resume resume)
-        {         
-            var item = resume;
-            var response = Request.CreateResponse<Resume>(HttpStatusCode.Created, item);
+        {
+            _store.AddResume(resume);
+            var response = Request.CreateResponse<Resume>(HttpStatusCode.Created, resume);
 
             string uri = Url.Link("DefaultApi", new { id = 1});
             response.Headers.Location = new Uri(uri);
@@ -39,15 +37,15 @@ namespace Samples._1.Server.Controllers
         public void PutResume(string id, Resume resume)
         {
             resume.Id = id;
-
-            var notFound = false;
-
-            if (notFound)
+            
+            if (!_store.UpdateResume(id, resume))
                 throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.NotFound));
         }
 
-        public HttpResponseMessage DeleteResume(int id)
-        {         
+        public HttpResponseMessage DeleteResume(string id)
+        {
+            _store.DeleteResume(id);
+
             return new HttpResponseMessage(HttpStatusCode.NoContent);
         }
     }
