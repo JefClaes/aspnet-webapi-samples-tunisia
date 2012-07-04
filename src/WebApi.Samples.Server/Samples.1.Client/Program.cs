@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Collections;
 using Samples._1.Server.Models;
 
-namespace Samples._1.Client
+namespace Samples.Client.PlayGround
 {
     class Program
     {

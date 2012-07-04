@@ -8,8 +8,8 @@
     <ProjectGuid>{73EC68AD-8E89-4EA3-B50A-3F5283B66148}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Samples._1.Client</RootNamespace>
-    <AssemblyName>Samples.1.Client</AssemblyName>
+    <RootNamespace>Samples.Client.PlayGround</RootNamespace>
+    <AssemblyName>Samples.Client.PlayGround</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>

@@ -5,7 +5,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.1.Server", "Samples
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples.1.SimpleCrud", "Samples.1.SimpleCrud", "{A7CE7685-7C05-4292-8BB1-08F9682CCD08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.1.Client", "Samples.1.Client\Samples.1.Client.csproj", "{73EC68AD-8E89-4EA3-B50A-3F5283B66148}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Client.Playground", "Samples.1.Client\Samples.Client.Playground.csproj", "{73EC68AD-8E89-4EA3-B50A-3F5283B66148}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples.2.DependencyInjection", "Samples.2.DependencyInjection", "{6136A71C-1ED8-4BF3-961D-179FDF28629F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,5 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B9F5B1AB-BBF7-47B7-8E16-D5AECB77BD70} = {A7CE7685-7C05-4292-8BB1-08F9682CCD08}
-		{73EC68AD-8E89-4EA3-B50A-3F5283B66148} = {A7CE7685-7C05-4292-8BB1-08F9682CCD08}
 	EndGlobalSection
 EndGlobal
