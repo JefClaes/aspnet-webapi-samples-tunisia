@@ -28,7 +28,7 @@ namespace Samples._1.Server.Controllers
             _store.AddResume(resume);
             var response = Request.CreateResponse<Resume>(HttpStatusCode.Created, resume);
 
-            string uri = Url.Link("DefaultApi", new { id = 1});
+            string uri = Url.Link("DefaultApi", new { id = resume.Id});
             response.Headers.Location = new Uri(uri);
 
             return response;

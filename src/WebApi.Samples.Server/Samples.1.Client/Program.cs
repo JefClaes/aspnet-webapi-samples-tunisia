@@ -19,8 +19,17 @@ namespace Samples._1.Client
 
             GetAll();
             GetById();
+            PostResume();
 
             Console.ReadLine();
+        }
+
+        static void PostResume()
+        {
+            var message = _httpClient.PostAsJsonAsync<Resume>("api/resume", new Resume() { FirstName = "Test", LastName = "Test" });
+
+            message.Result.EnsureSuccessStatusCode();
+            Console.WriteLine(message.Result.Headers.Location.AbsoluteUri);
         }
 
         static void GetById()
