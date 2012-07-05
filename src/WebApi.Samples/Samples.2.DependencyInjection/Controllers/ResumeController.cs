@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Samples._1.Server.Models;
+using Samples._2.Server.Models;
 
-namespace Samples._1.Server.Controllers
+namespace Samples._2.Server
 {    
     public class ResumeController : ApiController
     {
-        private static ResumeStore _store = new ResumeStore();
+        private readonly IResumeStore _store;
+
+        public ResumeController(IResumeStore store)
+        {
+            _store = store;
+        }
 
         public IEnumerable<Resume> GetResumes()
         {
