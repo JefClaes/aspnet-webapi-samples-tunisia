@@ -63,14 +63,17 @@
   <ItemGroup>
     <Compile Include="Controllers\ResumeController.cs" />
     <Compile Include="Infrastructure\NotImplementedExceptionFilter.cs" />
-    <Compile Include="Models\IResumeStore.cs" />
-    <Compile Include="Models\Resume.cs" />
-    <Compile Include="Models\ResumeStore.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Samples.Common\Samples.Common.csproj">
+      <Project>{11FB3DE9-A99D-4D08-9F6D-2042EB62E488}</Project>
+      <Name>Samples.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

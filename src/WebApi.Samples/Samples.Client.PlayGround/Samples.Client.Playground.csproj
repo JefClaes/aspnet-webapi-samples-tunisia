@@ -74,6 +74,10 @@
       <Project>{B9F5B1AB-BBF7-47B7-8E16-D5AECB77BD70}</Project>
       <Name>Samples.1.Server</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Samples.Common\Samples.Common.csproj">
+      <Project>{11FB3DE9-A99D-4D08-9F6D-2042EB62E488}</Project>
+      <Name>Samples.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

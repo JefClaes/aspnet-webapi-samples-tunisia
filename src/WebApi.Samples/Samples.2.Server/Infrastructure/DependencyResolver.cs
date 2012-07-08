@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web.Http.Dependencies;
-using Samples._2.Server.Models;
+using Samples.Common;
 
 namespace Samples._2.Server.Infrastructure
 {

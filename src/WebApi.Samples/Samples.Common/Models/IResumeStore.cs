@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Samples._2.Server.Models
+namespace Samples.Common
 {
     public interface IResumeStore
     {

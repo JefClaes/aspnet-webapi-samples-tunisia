@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Samples._3.Server.Models
+namespace Samples.Common
 {
     public class ResumeStore : IResumeStore
     {
-        private static List<Resume> _resumes = new List<Resume>()
+        private List<Resume> _resumes = new List<Resume>()
         {
-            new Resume() { Id = "1", FirstName = "Jef", LastName = "Claes", Skills = null },
-            new Resume() { Id = "2", FirstName = "Christophe", LastName = "Geers", Skills = null },
+            new Resume("Jef", "Claes") { Id = "1" },
+            new Resume("Christophe", "Geers") { Id = "2" }
         };
 
         public IEnumerable<Resume> GetAll()

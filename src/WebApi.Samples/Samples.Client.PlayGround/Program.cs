@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Net.Http;
 using System.Collections;
-using Samples._1.Server.Models;
+using Samples.Common;
 
 namespace Samples.Client.PlayGround
 {
@@ -26,7 +26,7 @@ namespace Samples.Client.PlayGround
 
         static void PostResume()
         {
-            var message = _httpClient.PostAsJsonAsync<Resume>("api/resume", new Resume() { FirstName = "Test", LastName = "Test" });
+            var message = _httpClient.PostAsJsonAsync<Resume>("api/resume", new Resume("Test", "Test"));
 
             message.Result.EnsureSuccessStatusCode();
             Console.WriteLine(message.Result.Headers.Location.AbsoluteUri);

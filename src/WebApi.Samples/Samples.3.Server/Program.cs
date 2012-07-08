@@ -12,7 +12,7 @@ namespace Samples._3.Server
     {
         static void Main(string[] args)
         {
-            var config = new HttpSelfHostConfiguration("http://localhost:8080");
+            var config = new HttpSelfHostConfiguration("http://localhost:8080");            
 
             config.Filters.Add(new NotImplementedExceptionFilter());
             config.Routes.MapHttpRoute(

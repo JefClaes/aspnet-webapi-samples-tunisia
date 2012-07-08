@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Samples._1.Server.Models;
+using Samples.Common;
 
 namespace Samples._1.Server.Controllers
 {    
