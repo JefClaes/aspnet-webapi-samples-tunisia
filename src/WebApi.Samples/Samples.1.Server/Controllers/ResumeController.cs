@@ -35,9 +35,8 @@ namespace Samples._1.Server.Controllers
         public void PutResume(string id, Resume resume)
         {
             resume.Id = id;
-            
-            if (!_store.UpdateResume(id, resume))
-                throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.NotFound));
+
+            _store.UpdateResume(id, resume);
         }
 
         public HttpResponseMessage DeleteResume(string id)
