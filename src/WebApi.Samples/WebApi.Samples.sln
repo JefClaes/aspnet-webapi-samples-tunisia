@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples.2.DependencyInjecti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Client.Playground", "Samples.Client.PlayGround\Samples.Client.Playground.csproj", "{73EC68AD-8E89-4EA3-B50A-3F5283B66148}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.2.Server", "Samples.2.DependencyInjection\Samples.2.Server.csproj", "{4E212977-3605-412F-BE99-B3BA646F5EAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.2.Server", "Samples.2.Server\Samples.2.Server.csproj", "{4E212977-3605-412F-BE99-B3BA646F5EAF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples.3.ExceptionHandling", "Samples.3.ExceptionHandling", "{2408B219-71C1-4F1D-A71D-9CEBB917B124}"
 EndProject
