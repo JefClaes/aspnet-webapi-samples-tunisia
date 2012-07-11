@@ -9,7 +9,12 @@ namespace Samples._5.Server.Controllers
 {    
     public class ResumeController : ApiController
     {
-        private static ResumeStore _store = new ResumeStore();
+        private static IResumeStore _store;
+
+        public ResumeController(IResumeStore resumeStore)
+        {
+            _store = resumeStore;
+        }
 
         public IEnumerable<Resume> GetResumes()
         {
