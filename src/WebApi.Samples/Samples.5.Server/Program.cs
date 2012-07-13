@@ -12,13 +12,8 @@ namespace Samples._5.Server
     {
         static void Main(string[] args)
         {
-            var config = new HttpSelfHostConfiguration("http://localhost:8080");
-
-            config.Routes.MapHttpRoute(
-                "DefaultApi", "api/{controller}/{id}",
-                new { id = RouteParameter.Optional });
-            config.MessageHandlers.Add(new MethodOverrideHandler());
-
+            var config = ServerSetup.GetConfiguration("http://localhost:8080");
+         
             using (var server = new HttpSelfHostServer(config))
             {
                 server.OpenAsync().Wait();

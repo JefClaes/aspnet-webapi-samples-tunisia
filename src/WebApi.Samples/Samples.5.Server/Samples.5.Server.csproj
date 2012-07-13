@@ -60,6 +60,7 @@
     <Compile Include="Controllers\ResumeController.cs" />
     <Compile Include="Infrastructure\DependencyResolver.cs" />
     <Compile Include="Infrastructure\MethodOverrideHandler.cs" />
+    <Compile Include="Infrastructure\ServerSetup.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
