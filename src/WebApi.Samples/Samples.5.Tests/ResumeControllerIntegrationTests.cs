@@ -11,6 +11,7 @@ using System.Net;
 using Moq;
 using System.Web.Http.Dependencies;
 using Samples._5.Server.Controllers;
+using Ninject;
 
 namespace Samples._5.Tests
 {
@@ -24,26 +25,16 @@ namespace Samples._5.Tests
         {
             var resumeStore = new Mock<IResumeStore>();
             resumeStore
-              .Setup(rs => rs.GetById("1"))
-              .Returns(new Resume("Jef", "Claes"));
-            var dependencyResolver = new Mock<IDependencyResolver>();
-            dependencyResolver
-                .Setup(r => r.GetService(typeof(ResumeController)))
-                .Returns(new ResumeController(resumeStore.Object));
-            dependencyResolver
-                .Setup(dr => dr.BeginScope())
-                .Returns((IDependencyScope)dependencyResolver.Object);
-            dependencyResolver
-                .Setup(dr => dr.GetServices(It.IsAny<Type>()))
-                .Returns(new List<object>());
+                .Setup(rs => rs.GetById("1"))
+                .Returns(new Resume("Jef", "Claes"));
+
+            var kernel = new StandardKernel();
+            kernel.Bind<IResumeStore>().ToConstant(resumeStore.Object);
 
             var config = ServerSetup.GetConfiguration("http://test");
-            config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;            
-            config.DependencyResolver = dependencyResolver.Object;
+            config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;                        
 
-            var server = new HttpServer(config);
-
-            _client = new HttpClient(server);
+            _client = new HttpClient(new HttpServer(config));
         }
 
         [TestMethod]
