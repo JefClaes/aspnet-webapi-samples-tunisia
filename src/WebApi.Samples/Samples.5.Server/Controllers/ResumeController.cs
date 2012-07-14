@@ -46,7 +46,7 @@ namespace Samples._5.Server.Controllers
 
         public HttpResponseMessage DeleteResume(string id)
         {
-            _store.DeleteResume(id);
+            _store.DeleteResume(id);            
 
             return new HttpResponseMessage(HttpStatusCode.NoContent);
         }

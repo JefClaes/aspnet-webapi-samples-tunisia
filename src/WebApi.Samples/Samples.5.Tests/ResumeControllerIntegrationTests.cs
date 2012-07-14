@@ -37,12 +37,8 @@ namespace Samples._5.Tests
                 .Setup(dr => dr.GetServices(It.IsAny<Type>()))
                 .Returns(new List<object>());
 
-            var config = new HttpConfiguration();
-            config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
-            config.MessageHandlers.Add(new MethodOverrideHandler());
-            config.Routes.MapHttpRoute(
-                "DefaultApi", "api/{controller}/{id}",
-                new { id = RouteParameter.Optional });
+            var config = ServerSetup.GetConfiguration("http://test");
+            config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;            
             config.DependencyResolver = dependencyResolver.Object;
 
             var server = new HttpServer(config);
@@ -70,6 +66,6 @@ namespace Samples._5.Tests
             result.EnsureSuccessStatusCode();            
 
             Assert.AreEqual(HttpStatusCode.NoContent, result.StatusCode);
-        }
+        }        
     }
 }
