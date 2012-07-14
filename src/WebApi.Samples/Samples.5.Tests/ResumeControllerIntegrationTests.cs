@@ -12,6 +12,7 @@ using Moq;
 using System.Web.Http.Dependencies;
 using Samples._5.Server.Controllers;
 using Ninject;
+using System.Net.Http.Formatting;
 
 namespace Samples._5.Tests
 {
@@ -57,6 +58,16 @@ namespace Samples._5.Tests
             result.EnsureSuccessStatusCode();            
 
             Assert.AreEqual(HttpStatusCode.NoContent, result.StatusCode);
-        }      
+        }
+
+        [TestMethod]
+        public void Post_Returns_HttpStatus_Code_Created()
+        {
+            var result = _client.PostAsync<Resume>("http://test/api/resume", new Resume("Jef", "Claes"), new JsonMediaTypeFormatter()).Result;
+
+            result.EnsureSuccessStatusCode();
+
+            Assert.AreEqual(HttpStatusCode.Created, result.StatusCode);
+        }
     }
 }

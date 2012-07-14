@@ -17,7 +17,7 @@ namespace Samples._5.Server.Infrastructure
 
             var kernel = new StandardKernel();
             kernel.Bind<IResumeStore>().To<ResumeStore>();
-
+            
             config.Routes.MapHttpRoute(
                 "DefaultApi", "api/{controller}/{id}",
                 new { id = RouteParameter.Optional });
