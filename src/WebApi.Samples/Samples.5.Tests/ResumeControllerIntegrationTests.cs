@@ -57,6 +57,6 @@ namespace Samples._5.Tests
             result.EnsureSuccessStatusCode();            
 
             Assert.AreEqual(HttpStatusCode.NoContent, result.StatusCode);
-        }        
+        }      
     }
 }
