@@ -34,6 +34,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		WebApi.Samples.vsmdi = WebApi.Samples.vsmdi
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples.6.Security", "Samples.6.Security", "{95E3E814-9639-4C97-AEDF-6D6763ED23CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.6.Server", "Samples.6.Server\Samples.6.Server.csproj", "{CB9D5ED7-C373-491E-A527-577988EC1D8F}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = WebApi.Samples.vsmdi
@@ -127,6 +131,16 @@ Global
 		{228F4F34-CFD3-4BD7-BC6F-262D199D8032}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{228F4F34-CFD3-4BD7-BC6F-262D199D8032}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{228F4F34-CFD3-4BD7-BC6F-262D199D8032}.Release|x86.ActiveCfg = Release|Any CPU
+		{CB9D5ED7-C373-491E-A527-577988EC1D8F}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{CB9D5ED7-C373-491E-A527-577988EC1D8F}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{CB9D5ED7-C373-491E-A527-577988EC1D8F}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{CB9D5ED7-C373-491E-A527-577988EC1D8F}.Debug|x86.ActiveCfg = Debug|x86
+		{CB9D5ED7-C373-491E-A527-577988EC1D8F}.Debug|x86.Build.0 = Debug|x86
+		{CB9D5ED7-C373-491E-A527-577988EC1D8F}.Release|Any CPU.ActiveCfg = Release|x86
+		{CB9D5ED7-C373-491E-A527-577988EC1D8F}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{CB9D5ED7-C373-491E-A527-577988EC1D8F}.Release|Mixed Platforms.Build.0 = Release|x86
+		{CB9D5ED7-C373-491E-A527-577988EC1D8F}.Release|x86.ActiveCfg = Release|x86
+		{CB9D5ED7-C373-491E-A527-577988EC1D8F}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -139,5 +153,6 @@ Global
 		{F26318AB-DA74-46E7-8769-738154327A22} = {D58DBFA6-09E8-4F59-8AE1-D2E87F0CE245}
 		{228F4F34-CFD3-4BD7-BC6F-262D199D8032} = {D58DBFA6-09E8-4F59-8AE1-D2E87F0CE245}
 		{C61F44A8-4EDC-4A1C-845E-0551C45186A9} = {D58DBFA6-09E8-4F59-8AE1-D2E87F0CE245}
+		{CB9D5ED7-C373-491E-A527-577988EC1D8F} = {95E3E814-9639-4C97-AEDF-6D6763ED23CB}
 	EndGlobalSection
 EndGlobal
