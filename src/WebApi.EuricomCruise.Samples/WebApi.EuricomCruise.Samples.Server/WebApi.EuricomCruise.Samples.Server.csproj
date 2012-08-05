@@ -66,6 +66,7 @@
     <Compile Include="Bank.cs" />
     <Compile Include="BankStore.cs" />
     <Compile Include="BankController.cs" />
+    <Compile Include="Infrastructure\NotImplementedErrorFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

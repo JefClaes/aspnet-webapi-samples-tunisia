@@ -18,8 +18,14 @@ namespace WebApi.EuricomCruise.Samples.Server.Controllers
         }
 
         public Bank GetByIdentifier(string id)
-        {
-            return _bankStore.GetById(id);
+        {          
+            var bank = _bankStore.GetById(id);
+
+            if (bank == null)
+                throw new HttpResponseException(
+                    new HttpResponseMessage(HttpStatusCode.NotFound));
+
+            return bank;                
         }
 
         public HttpResponseMessage PostBank(Bank bank)
@@ -34,7 +40,7 @@ namespace WebApi.EuricomCruise.Samples.Server.Controllers
 
         public void PutBank(string id, Bank bank)
         {
-            _bankStore.UpdateBank(id, bank);
+            throw new NotImplementedException();
         }
 
         public HttpResponseMessage DeleteBank(string id)

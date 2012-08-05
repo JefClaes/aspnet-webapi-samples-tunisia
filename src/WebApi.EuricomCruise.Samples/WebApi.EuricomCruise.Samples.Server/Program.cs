@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Web.Http.SelfHost;
 using System.Web.Http;
+using WebApi.EuricomCruise.Samples.Server.Infrastructure;
 
 namespace WebApi.EuricomCruise.Samples.Server
 {
@@ -13,6 +14,8 @@ namespace WebApi.EuricomCruise.Samples.Server
         {
             var config = new HttpSelfHostConfiguration("http://localhost:8080");
 
+            config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Never;
+            config.Filters.Add(new NotImplementedErrorFilter());
             config.Routes.MapHttpRoute(
                 "DefaultApi", "api/{controller}/{id}",
                 new { id = RouteParameter.Optional });
