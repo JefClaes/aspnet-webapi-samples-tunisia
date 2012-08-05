@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.EuricomCruise.Samples.Server", "WebApi.EuricomCruise.Samples.Server\WebApi.EuricomCruise.Samples.Server.csproj", "{26DBABC3-E0FF-4763-A2C7-182E6E2218D8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{861B2A53-B0A5-4B9F-9775-EA1AA6701FBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.EuricomCruise.Samples.Client", "WebApi.EuricomCruise.Samples.Client\WebApi.EuricomCruise.Samples.Client.csproj", "{614B7081-1FFC-4E1B-B5AB-A0A91B9ECBB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +17,10 @@ Global
 		{26DBABC3-E0FF-4763-A2C7-182E6E2218D8}.Debug|x86.Build.0 = Debug|x86
 		{26DBABC3-E0FF-4763-A2C7-182E6E2218D8}.Release|x86.ActiveCfg = Release|x86
 		{26DBABC3-E0FF-4763-A2C7-182E6E2218D8}.Release|x86.Build.0 = Release|x86
+		{614B7081-1FFC-4E1B-B5AB-A0A91B9ECBB2}.Debug|x86.ActiveCfg = Debug|x86
+		{614B7081-1FFC-4E1B-B5AB-A0A91B9ECBB2}.Debug|x86.Build.0 = Debug|x86
+		{614B7081-1FFC-4E1B-B5AB-A0A91B9ECBB2}.Release|x86.ActiveCfg = Release|x86
+		{614B7081-1FFC-4E1B-B5AB-A0A91B9ECBB2}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

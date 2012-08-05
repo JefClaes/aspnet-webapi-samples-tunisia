@@ -30,7 +30,7 @@ namespace WebApi.EuricomCruise.Samples.Server
 
         public bool UpdateBank(string id, Bank bank)
         {
-            int index = _banks.FindIndex(r => r.BIC == bank.Id);
+            int index = _banks.FindIndex(r => r.BIC == bank.BIC);
             if (index == -1)
                 return false;
 

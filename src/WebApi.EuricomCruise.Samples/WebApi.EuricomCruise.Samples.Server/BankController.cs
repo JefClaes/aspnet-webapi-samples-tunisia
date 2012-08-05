@@ -41,7 +41,7 @@ namespace WebApi.EuricomCruise.Samples.Server.Controllers
         {
             _bankStore.DeleteBank(id);
 
-            return new HttpResponseMessage(HttpStatusCode.);
+            return new HttpResponseMessage(HttpStatusCode.NoContent);
         }
     }
 }
