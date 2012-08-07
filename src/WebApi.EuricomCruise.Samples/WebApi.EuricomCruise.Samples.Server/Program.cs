@@ -20,6 +20,7 @@ namespace WebApi.EuricomCruise.Samples.Server
                 "DefaultApi", "api/{controller}/{id}",
                 new { id = RouteParameter.Optional });
             config.Formatters.Add(new EuricomFormatter());
+            config.MessageHandlers.Add(new MethodOverrideHandler());
 
             using (var server = new HttpSelfHostServer(config))
             {

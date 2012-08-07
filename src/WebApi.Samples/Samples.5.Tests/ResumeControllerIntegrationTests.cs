@@ -35,7 +35,7 @@ namespace Samples._5.Tests
             var config = ServerSetup.GetConfiguration("http://test");
             config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;                        
             config.DependencyResolver = new NinjectDependencyResolver(kernel);
-
+            
             _client = new HttpClient(new HttpServer(config));
         }
 
