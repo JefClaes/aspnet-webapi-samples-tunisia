@@ -7,7 +7,7 @@ namespace WebApi.EuricomCruise.Samples.Server
 {
     public class BankStore 
     {
-        private List<Bank> _banks = new List<Bank>()
+        private static List<Bank> _banks = new List<Bank>()
         {
             new Bank() { BIC = "123" },
             new Bank() { BIC = "456" }

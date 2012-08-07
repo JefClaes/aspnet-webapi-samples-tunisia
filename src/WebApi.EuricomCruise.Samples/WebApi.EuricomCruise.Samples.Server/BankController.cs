@@ -10,7 +10,12 @@ namespace WebApi.EuricomCruise.Samples.Server.Controllers
 {
     public class BankController : ApiController
     {
-        private static BankStore _bankStore = new BankStore();
+        private readonly BankStore _bankStore;
+
+        public BankController(BankStore bankStore)
+        {
+            _bankStore = bankStore;
+        }
        
         public IEnumerable<Bank> GetBanks()
         {

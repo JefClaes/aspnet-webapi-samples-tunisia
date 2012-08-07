@@ -21,6 +21,7 @@ namespace WebApi.EuricomCruise.Samples.Server
                 new { id = RouteParameter.Optional });
             config.Formatters.Add(new EuricomFormatter());
             config.MessageHandlers.Add(new MethodOverrideHandler());
+            config.DependencyResolver = new DependencyResolver();
 
             using (var server = new HttpSelfHostServer(config))
             {
