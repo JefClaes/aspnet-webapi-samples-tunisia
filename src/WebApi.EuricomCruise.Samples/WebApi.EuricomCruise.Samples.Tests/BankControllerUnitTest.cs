@@ -7,9 +7,7 @@ namespace WebApi.EuricomCruise.Samples.Tests
 {    
     [TestClass()]
     public class BankControllerUnitTest
-    {
-        private TestContext testContextInstance;       
-        
+    {        
         [TestMethod()]
         [ExpectedException(typeof(NotImplementedException))]
         public void Put_throws_not_implemented_exception()

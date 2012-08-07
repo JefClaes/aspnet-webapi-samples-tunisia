@@ -15,8 +15,6 @@ namespace WebApi.EuricomCruise.Samples.Tests
     [TestClass()]
     public class BankControllerIntegrationTest
     {
-        private TestContext testContextInstance;
-
         [TestMethod()]
         public void Put_throws_not_implemented_exception()
         {
