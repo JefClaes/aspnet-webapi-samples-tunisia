@@ -31,7 +31,6 @@ namespace WebApi.EuricomCruise.Samples.Server.Infrastructure
         public override void WriteToStream(Type type, object value, Stream stream, HttpContentHeaders contentHeaders)
         {
             var bank = (Bank)value;
-
             using (var writer = new StreamWriter(stream))
             {
                 writer.Write(bank.BIC + ":EURI:" + bank.Name);
