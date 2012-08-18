@@ -32,7 +32,7 @@ namespace WebApi.EuricomCruise.Samples.Tests
             var server = new HttpServer(config);
             var client = new HttpClient(server);
 
-            var result = client.PutAsXmlAsync<Bank>("http://localhost:8080/api/bank", new Bank()).Result;
+            var result = client.PutAsXmlAsync<Bank>("http://localhost:8080/api/bank/1", new Bank()).Result;
 
             Assert.AreEqual(HttpStatusCode.NotImplemented, result.StatusCode);
         }

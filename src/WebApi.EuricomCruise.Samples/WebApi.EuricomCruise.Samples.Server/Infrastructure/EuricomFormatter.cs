@@ -28,13 +28,13 @@ namespace WebApi.EuricomCruise.Samples.Server.Infrastructure
             return false;
         }
 
-        public override void WriteToStream(Type type, object value, Stream stream, HttpContentHeaders contentHeaders)
+        public override void WriteToStream(Type type, object value, Stream writeStream, System.Net.Http.HttpContent content)
         {
             var bank = (Bank)value;
-            using (var writer = new StreamWriter(stream))
+            using (var writer = new StreamWriter(writeStream))
             {
                 writer.Write(bank.BIC + ":EURI:" + bank.Name);
             }
-        }
+        }        
     }
 }

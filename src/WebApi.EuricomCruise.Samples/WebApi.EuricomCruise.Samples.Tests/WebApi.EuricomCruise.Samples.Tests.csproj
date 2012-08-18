@@ -58,7 +58,8 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BankControllerTest.cs" />
+    <Compile Include="BankControllerIntegrationTest.cs" />
+    <Compile Include="BankControllerUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
