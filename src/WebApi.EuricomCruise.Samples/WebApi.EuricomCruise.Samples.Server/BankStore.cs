@@ -9,8 +9,8 @@ namespace WebApi.EuricomCruise.Samples.Server
     {
         private static List<Bank> _banks = new List<Bank>()
         {
-            new Bank() { BIC = "123" },
-            new Bank() { BIC = "456" }
+            new Bank() { BIC = "1", Name = "KBC" },
+            new Bank() { BIC = "2", Name = "Belfius" }
         };
 
         public IEnumerable<Bank> GetAll()
