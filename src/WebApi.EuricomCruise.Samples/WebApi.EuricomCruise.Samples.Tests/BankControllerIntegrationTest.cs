@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.SelfHost;
-using WebApi.EuricomCruise.Samples.Server.Infrastructure;
-using System.Net.Http;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WebApi.EuricomCruise.Samples.Server;
-using System.Net;
+using WebApi.EuricomCruise.Samples.Server.Infrastructure;
 
 namespace WebApi.EuricomCruise.Samples.Tests
 {
@@ -32,7 +28,7 @@ namespace WebApi.EuricomCruise.Samples.Tests
             var server = new HttpServer(config);
             var client = new HttpClient(server);
 
-            var result = client.PutAsXmlAsync<Bank>("http://localhost:8080/api/bank/1", new Bank()).Result;
+            var result = client.PutAsXmlAsync<Bank>("http://localhost:8080/api/bank/1", (new Bank() { BIC = "1", Name = "KBC" })).Result;
 
             Assert.AreEqual(HttpStatusCode.NotImplemented, result.StatusCode);
         }

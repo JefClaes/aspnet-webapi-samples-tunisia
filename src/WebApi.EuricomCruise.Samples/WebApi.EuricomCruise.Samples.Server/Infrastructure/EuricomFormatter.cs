@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.IO;
 using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
-using System.IO;
+using System.Net.Http;
 
 namespace WebApi.EuricomCruise.Samples.Server.Infrastructure
 {
@@ -28,9 +26,10 @@ namespace WebApi.EuricomCruise.Samples.Server.Infrastructure
             return false;
         }
 
-        public override void WriteToStream(Type type, object value, Stream writeStream, System.Net.Http.HttpContent content)
+        public override void WriteToStream(Type type, object value, Stream writeStream, HttpContent content)
         {
             var bank = (Bank)value;
+
             using (var writer = new StreamWriter(writeStream))
             {
                 writer.Write(bank.BIC + ":EURI:" + bank.Name);

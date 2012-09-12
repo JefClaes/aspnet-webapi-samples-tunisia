@@ -14,11 +14,11 @@ namespace WebApi.EuricomCruise.Samples.Server
         {
             var config = new HttpSelfHostConfiguration("http://localhost:8080");
 
-            config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Never;
-            config.Filters.Add(new NotImplementedErrorFilter());
+            config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.LocalOnly;
             config.Routes.MapHttpRoute(
                 "DefaultApi", "api/{controller}/{id}",
                 new { id = RouteParameter.Optional });
+            config.Filters.Add(new NotImplementedErrorFilter());            
             config.Formatters.Add(new EuricomFormatter());
             config.MessageHandlers.Add(new MethodOverrideHandler());
             config.DependencyResolver = new DependencyResolver();

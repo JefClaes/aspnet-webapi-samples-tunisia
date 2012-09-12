@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Web.Http.Dependencies;
 using WebApi.EuricomCruise.Samples.Server.Controllers;
 
@@ -29,7 +27,7 @@ namespace WebApi.EuricomCruise.Samples.Server.Infrastructure
 
         public void Dispose()
         {
-            // Do nothing
+            // No need to implement for now
         }
     }
 }
